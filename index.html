@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Gallery</title>
+
+  <style>
+    ::selection {
+      background-color: #ff1493;
+      color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      background-color: #000000;
+      color: #f7f7f2;
+      font-family: Georgia, "Times New Roman", serif;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='6' cy='6' r='5' fill='%23ff1493'/%3E%3C/svg%3E") 6 6, auto;
+    }
+
+    .page {
+      width: min(1200px, 88%);
+      margin: 0 auto;
+      padding: 42px 0 120px;
+    }
+
+    header {
+      min-height: 130vh;
+      position: relative;
+    }
+
+    .intro {
+      position: sticky;
+      top: 42px;
+      padding-bottom: 120px;
+      animation: fadeIn 1.1s ease forwards;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(80px, 12vw, 150px);
+      font-weight: normal;
+      line-height: 0.9;
+      letter-spacing: 0;
+    }
+
+    .artist-name {
+      margin: 18px 0 0;
+      font-size: 20px;
+      color: rgba(247, 247, 242, 0.65);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 160px;
+    }
+
+    .artwork {
+      width: fit-content;
+      max-width: 100%;
+      opacity: 0;
+      animation: riseIn 1s ease forwards;
+    }
+
+    .artwork:nth-child(even) {
+      margin-left: auto;
+    }
+
+    .artwork:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .artwork:nth-child(2) {
+      animation-delay: 0.25s;
+    }
+
+    .artwork:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .artwork:nth-child(4) {
+      animation-delay: 0.55s;
+    }
+
+    .artwork img,
+    .placeholder {
+      transition: transform 0.35s ease, filter 0.35s ease;
+    }
+
+    .artwork:hover img,
+    .artwork:hover .placeholder {
+      transform: translateY(-8px);
+      filter: brightness(1.12);
+    }
+
+    .artwork:hover h3 {
+      color: #ff1493;
+    }
+
+    .artwork img {
+      display: block;
+      width: auto;
+      max-width: min(520px, 100%);
+      height: auto;
+    }
+
+    .placeholder {
+      width: min(420px, 100%);
+      aspect-ratio: 4 / 5;
+      background-color: #111111;
+    }
+
+    .placeholder.wide {
+      width: min(560px, 100%);
+      aspect-ratio: 5 / 3;
+    }
+
+    .placeholder.tall {
+      width: min(360px, 100%);
+      aspect-ratio: 3 / 5;
+    }
+
+    .artwork-text {
+      margin-top: 18px;
+    }
+
+    .artwork h3 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: normal;
+      transition: color 0.35s ease;
+    }
+
+    .artwork p {
+      margin: 6px 0 0;
+      color: rgba(247, 247, 242, 0.6);
+      font-size: 15px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes riseIn {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: 88%;
+        padding-top: 32px;
+      }
+
+      header {
+        min-height: 110vh;
+      }
+
+      .gallery {
+        gap: 100px;
+      }
+
+      .artwork,
+      .artwork:nth-child(even) {
+        margin-left: 0;
+      }
+
+      .artwork h3 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header>
+      <div class="intro">
+        <h1>Welcome</h1>
+        <p class="artist-name">I'll walk you through my mind</p>
+      </div>
+    </header>
+
+    <section class="gallery">
+      <article class="artwork">
+        <img src="https://i.postimg.cc/Sss9JH7J/IMG-7377.jpg" alt="I can't, I'm a feminist">
+        <div class="artwork-text">
+          <h3>"I can't, I'm a feminist"</h3>
+          <p>2026</p>
+        </div>
+      </article>
+
+      <article class="artwork">
+        <div class="placeholder wide"></div>
+        <div class="artwork-text">
+          <h3>Artwork Two</h3>
+          <p>Short subtitle or material note.</p>
+        </div>
+      </article>
+
+      <article class="artwork">
+        <div class="placeholder tall"></div>
+        <div class="artwork-text">
+          <h3>Artwork Three</h3>
+          <p>Short subtitle or material note.</p>
+        </div>
+      </article>
+
+      <article class="artwork">
+        <div class="placeholder"></div>
+        <div class="artwork-text">
+          <h3>Artwork Four</h3>
+          <p>Short subtitle or material note.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
