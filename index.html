@@ -275,7 +275,13 @@
   </a>
 
   <div class="artwork-text">
-    <h3>"I can't, I'm a feminist"</h3>
+    <button id = "tochange">"I can't,"</button>
+    <script>
+      let button = document.querySelector("#tochange");
+      button.addEventListener("click", function() {
+        tochange.textContent = "I'm a feminist";
+  });
+    </script>
     <p>June 2026</p>
   </div>
 </article>
