@@ -105,7 +105,7 @@
     .artwork:hover h3 {
       color: #912F40;
     }
-    #tochange {
+    .tochange {
       cursor: pointer;
       user-select: none;
       transition: color 0.25s ease;
@@ -281,17 +281,21 @@
   </a>
 
   <div class="artwork-text">
-    <h3 id = "tochange">"I can't,"</h3>
-    <script>
-    let button = document.querySelector("#tochange");
-  button.addEventListener("click", function() {
-    if (button.textContent === "\"I can't,\"") {
-      button.textContent = "\"I'm a feminist\"";
+    <h3 id = "tochange">""I can't,""</h3>
+<script>
+  let title = document.querySelector("#tochange");
+
+  let firstText = "\"I can't,\"";
+  let secondText = "I'm a feminist";
+
+  title.addEventListener("click", function() {
+    if (title.textContent === firstText) {
+      title.textContent = secondText;
     } else {
-      button.textContent = "\"I can't,\"";
-    }      
+      title.textContent = firstText;
+    }
   });
-    </script>
+</script>
     <p>June 2026</p>
   </div>
 </article>
