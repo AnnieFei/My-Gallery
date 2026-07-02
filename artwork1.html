@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+  <style>
+    ::selection {
+      background-color: #ff1493;
+      color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      background-color: #000000;
+      color: #f7f7f2;
+      font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='6' cy='6' r='5' fill='%23ff1493'/%3E%3C/svg%3E") 6 6, auto;
+    }
+
+    .page {
+      width: min(1200px, 88%);
+      margin: 0 auto;
+      padding: 42px 0 120px;
+    }
+
+h1 {
+	margin: 0;
+	font-size: 40px;
+	color: #912F40;
+}
+
+    .artwork:hover img,
+    .artwork:hover .placeholder {
+      transform: translateY(-8px);
+      filter: brightness(1.12);
+    }
+    .artwork p {
+      margin: 6px 0 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 10px;
+    }
+
+   .goback {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(247, 247, 242, 0.55);
+  color: #003F91;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  background-color: #000000;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  z-index: 10;
+}
+
+.goback:hover {
+  background-color: #ff1493;
+  border-color: #ff1493;
+  color: #000000;
+}
+
+.art-page {
+  width: min(1200px, 88%);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.art-detail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.art-image img {
+  display: block;
+  width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+.art-info {
+  text-align: right;
+}
+
+.art-info h1 {
+  margin: 0;
+  font-size: clamp(48px, 7vw, 100px);
+  font-weight: normal;
+  line-height: 0.95;
+}
+
+.art-info .year {
+  margin: 18px 0 40px;
+  color: rgba(247, 247, 242, 0.6);
+  font-size: 18px;
+}
+
+.art-info p {
+  margin-left: auto;
+  max-width: 420px;
+  color: rgba(247, 247, 242, 0.72);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .art-page {
+    padding: 100px 0 80px;
+    align-items: flex-start;
+  }
+
+  .art-detail {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .art-info {
+    text-align: left;
+  }
+
+  .art-info p {
+    margin-left: 0;
+  }
+}
+
+</style>
+
+<body>
+<a class="goback" href="index.html">←</a>
+
+  <main class="art-page">
+    <section class="art-detail">
+      <div class="art-image">
+        <img src="your-artwork-image.jpg" alt=""I can't, I'm a feminist"">
+      </div>
+
+      <div class="art-info">
+        <h1>"I can't, I'm a feminist"</h1>
+        <p class="year">June 2026</p>
+        <p>
+          I don't like to subject a certain group of people, gender, age. It's hard to want to follow a god but can't because you don't believe there is one. Religion, us, nature, earth, time. 
+        </p>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
