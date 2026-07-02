@@ -283,9 +283,13 @@
   <div class="artwork-text">
     <h3 id = "tochange">"I can't,"</h3>
     <script>
-      let button = document.querySelector("#tochange");
-      button.addEventListener("click", function() {
-        tochange.textContent = ""I'm a feminist"";
+    let button = document.querySelector("#tochange");
+  button.addEventListener("click", function() {
+    if (button.textContent === "\"I can't,\"") {
+      button.textContent = "\"I'm a feminist\"";
+    } else {
+      button.textContent = "\"I can't,\"";
+    }      
   });
     </script>
     <p>June 2026</p>
