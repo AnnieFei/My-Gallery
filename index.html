@@ -204,19 +204,9 @@
   transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
 }
 
-.artwork-link .hover-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.artwork-link:hover .main-image {
-  opacity: 0;
-}
-
-.artwork-link:hover .hover-image {
-  opacity: 1;
+.artwork-link:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.1);
 }
 
     @keyframes fadeIn {
@@ -282,7 +272,6 @@
 <article class="artwork">
   <a class="artwork-link" href="artwork-one.html">
     <img class="main-image" src="https://i.postimg.cc/Sss9JH7J/IMG-7377.jpg" alt="I can't, I'm a feminist">
-    <img class="hover-image" src="https://i.postimg.cc/j5H8pszK/Adobe-Express-Photos-5365ea922609484683dd9284d1367531-Copy-Edited.png" alt="">
   </a>
 
   <div class="artwork-text">
